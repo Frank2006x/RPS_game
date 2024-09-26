@@ -15,7 +15,7 @@ function getComputerchoice(){
 function gethumanchoice(){
     
     let y
-    y=parseInt(prompt("Enter the choice"))
+    // y=parseInt(prompt("Enter the choice"))
     if (y===1){
         return 'rock'
 
@@ -34,7 +34,7 @@ let Computerscore=0
 let n=0
 console.log("1-rock")
 console.log("2-paper")
-console.log("3-rock")
+console.log("3-scissor")
 
 while (n<6){
     const h=gethumanchoice()
@@ -44,19 +44,23 @@ while (n<6){
     if (h==c){
         console.log("it is tie")
     }
-    else if (h=='rock'&& c=='scissor'){
-        Humanscore++
+    else {
+        if (h=='rock'&& c=='scissor'){
+            Humanscore++
+        }
+        else if (h=='scissor'&& c=='paper'){
+            Humanscore++
+        }
+        else if (c=='rock'&& h=='paper'){
+            Humanscore++
+        }
+        else{
+            Computerscore++
+        }
+        n++
+
     }
-    else if (h=='scissor'&& c=='paper'){
-        Humanscore++
-    }
-    else if (c=='rock'&& h=='paper'){
-        Humanscore++
-    }
-    else{
-        Computerscore++
-    }
-    n++
+    
     console.log('me:'+Humanscore)
     console.log('you:'+Computerscore)
 }

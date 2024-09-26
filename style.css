@@ -1,0 +1,17 @@
+.avatar{
+    max-height: 175px;
+    max-width:225px;
+
+}
+.player{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+#title{
+    text-align: center
+}
+.buttons{
+    ;
+}
